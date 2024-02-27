@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1174</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="GLview" name="widget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>831</width>
+      <height>711</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="build">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>110</y>
+      <width>311</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Построить 3Д объект</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="phon_color">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>440</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> цвет фона</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="open_file">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>80</y>
+      <width>311</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбрать файл</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lab_name_file">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>10</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>30</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>кол-во вершин</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_v">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>50</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_f">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>50</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>30</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>кол-во граней</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="point_color">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>440</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>цвет точек</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="line_color">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>440</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> цвет линий</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll">
+    <property name="geometry">
+     <rect>
+      <x>1019</x>
+      <y>170</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>170</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Масштаб</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll_2">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>200</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Вращение </string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll_x">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>230</y>
+      <width>160</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-300</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll_x">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>230</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>по оси Х</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll_y">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>260</y>
+      <width>160</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-300</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll_y">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>260</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>по оси Y</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll_z">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>290</y>
+      <width>160</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-300</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll_z">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>290</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>по оси Z</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll_y_2">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>380</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>по оси Y</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll_3">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>320</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Смещение</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll_z_m">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>410</y>
+      <width>160</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll_z_2">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>410</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>по оси Z</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scroll_x_2">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>350</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>по оси Х</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll_x_m">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>350</y>
+      <width>160</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll_y_m">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>380</y>
+      <width>160</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="line_punktir">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>490</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>пунктир</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_line">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>490</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Линии</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_line_w">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>510</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Толщина </string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll_line">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>510</y>
+      <width>160</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>40</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+    <property name="sliderPosition">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scroll_point">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>550</y>
+      <width>160</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>40</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+    <property name="sliderPosition">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_point_w">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>550</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Толщина </string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>140</y>
+      <width>321</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_scroll_4">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Проекция</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="parallel">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>parallel</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="center">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>center</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>530</y>
+      <width>321</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_poiint">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Точки</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radio_point">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>выкл</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radio_cicle">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>круг</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radio_square">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>квадрат</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="screenshot">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>580</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Screenshot</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="to_gif">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>610</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Record to Gif</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GLview</class>
+   <extends>QOpenGLWidget</extends>
+   <header>glview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
